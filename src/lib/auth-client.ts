@@ -47,4 +47,5 @@ export const {
   organization,
   useListOrganizations,
   useActiveOrganization,
+  oneTap,
 } = authClient;
