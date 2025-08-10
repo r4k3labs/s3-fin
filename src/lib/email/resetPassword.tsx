@@ -22,7 +22,7 @@ export const ResetPasswordEmail = ({
   username,
   resetLink,
 }: BetterAuthResetPasswordEmailProps) => {
-  const previewText = "Reset your PhotoMetric";
+  const previewText = "Reset your Simple Saas";
   return (
     <Html>
       <Head />

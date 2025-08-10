@@ -77,7 +77,7 @@ const options = {
               process.env.NODE_ENV === "development"
                 ? `http://localhost:3000/sign-in?redirect=/accept-invitation/${data.id}`
                 : `${
-                    process.env.BETTER_AUTH_URL || "https://photometric.app"
+                    process.env.BETTER_AUTH_URL || "https://Simple Saas.app"
                   }/sign-in?redirect=/accept-invitation/${data.id}`,
           }),
         });

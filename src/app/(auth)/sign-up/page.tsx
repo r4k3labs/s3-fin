@@ -1,7 +1,8 @@
 "use client";
 
 import SignIn from "@/components/sign-in";
-
+import SignUp from "@/components/sign-up";
+import { Tabs } from "@/components/ui/tabs2";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -26,7 +27,7 @@ export default function Page() {
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
-        <SignIn />
+        <SignUp />
       </div>
     </div>
   );

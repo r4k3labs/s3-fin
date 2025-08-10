@@ -43,7 +43,7 @@ export const InviteUserEmail = ({
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
               Join <strong>{invitedByUsername}</strong> on{" "}
-              <strong>PhotoMetric.</strong>
+              <strong>Simple Saas.</strong>
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
               Hello there,
@@ -57,7 +57,7 @@ export const InviteUserEmail = ({
                 {invitedByEmail}
               </Link>
               ) has invited you to the <strong>{teamName}</strong> team on{" "}
-              <strong>Photometric</strong>.
+              <strong>Simple Saas</strong>.
             </Text>
             <Section>
               {teamImage ? (
