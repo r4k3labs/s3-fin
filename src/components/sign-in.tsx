@@ -175,6 +175,19 @@ export default function SignIn() {
           </div>
         </div>
       </CardContent>
+      <CardFooter className="items-center justify-center flex">
+        <div className="text-center text-sm ">
+          <>
+            Don't have an account?
+            <Link
+              href={`${"/sign-up"}${redirect ? `?redirect=${redirect}` : ""}`}
+              className="underline underline-offset-4 ml-1"
+            >
+              SignUp
+            </Link>
+          </>
+        </div>
+      </CardFooter>
     </Card>
   );
 }

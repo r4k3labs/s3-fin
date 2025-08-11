@@ -17,9 +17,21 @@ import { resend } from "./email/resend";
 import { reactResetPasswordEmail } from "./email/resetPassword";
 import { reactInvitationEmail } from "./email/invitation";
 import { appRoles, ac } from "./permission";
+import { Redis } from "ioredis";
 
 const from = process.env.BETTER_AUTH_EMAIL || "mail@updates.rakyesh.com";
 const to = process.env.TEST_EMAIL || "";
+
+// const redis = new Redis(`${process.env.REDIS_URL}?family=0`)
+//   .on("error", (err) => {
+//     console.error("Redis connection error:", err);
+//   })
+//   .on("connect", () => {
+//     console.log("Redis connected");
+//   })
+//   .on("ready", () => {
+//     console.log("Redis ready");
+//   });
 
 const options = {
   database: drizzleAdapter(db, {
@@ -125,6 +137,22 @@ const options = {
       disableIpTracking: false,
     },
   },
+  // secondaryStorage: {
+  //   get: async (key) => {
+  //     const value = await redis.get(key);
+  //     return value ? value : null;
+  //   },
+  //   set: async (key, value, ttl) => {
+  //     if (ttl) {
+  //       await redis.set(key, value, "EX", ttl);
+  //     } else {
+  //       await redis.set(key, value);
+  //     }
+  //   },
+  //   delete: async (key) => {
+  //     await redis.del(key);
+  //   },
+  // },
 } satisfies BetterAuthOptions;
 
 export const auth = betterAuth({

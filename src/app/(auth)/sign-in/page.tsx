@@ -4,7 +4,7 @@ import SignIn from "@/components/sign-in";
 
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { toast } from "sonner";
 
 export default function Page() {
@@ -26,7 +26,9 @@ export default function Page() {
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
-        <SignIn />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SignIn />
+        </Suspense>
       </div>
     </div>
   );
