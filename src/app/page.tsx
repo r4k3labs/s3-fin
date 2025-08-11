@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div className="bg-primary text-primary-foreground">Hello World</div>;
+  return (
+    <div className="bg-primary text-primary-foreground">
+      Simple Sass Starter
+    </div>
+  );
 }
