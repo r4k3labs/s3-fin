@@ -125,7 +125,6 @@ const options = {
       disableIpTracking: false,
     },
   },
-  disabledPaths: ["/sign-up/email", "/sign-in/email"],
 } satisfies BetterAuthOptions;
 
 export const auth = betterAuth({
